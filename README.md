@@ -18,23 +18,33 @@ The gist of my program:
 2) For each tweet, count how many times each word in the dictionary is found in that tweet.  The feature vector for each tweet is therefore a vector of length d, where the values are equal to the number of times each word appears.  The feature matrix X is a n * d matrix that represents every tweet in the training set.
 
 3) Create 3 classifiers, one for each of love, hate, and sadness.  For each of the these classifiers:
+
     -It is essentially a binary classifier that calls its sentiment 1 and everything else -1. 
+    
     -Test their performance (based on the AUROC metric) on several magnitudes of hyperparameters
+    
     -Performance is checked using stratified k-fold cross validation (each split has the same ratio of love, hate, and sad tweets)
+    
     -Pick the best hyperparameter C for each classifier, and train each classifier on the training set with their respective optimal C
     
 4) Similar to step 2, create the feature matrix for the test set.  Each feature vector is of length d.
 
 5) Using the 3 optimized classifiers, we now must decide which one to go with when deciding our final prediction.
+
     -For each new piece of test data, check the 3 classifiers in order of highest confidence.  
-      -If the highest confidence classifier (for sentiment A) classifies it as 1, label the tweet A.  
+    
+      -If the highest confidence classifier (for sentiment A) classifies it as 1, label the tweet A. 
+      
       -Otherwise, look at the next highest confidence classifier (sentiment B).  If that is 1, label the tweet B.
+      
       -Otherwise, label the tweet the last sentiment.
       
 6) These predictions are then output to MyPredictions.csv
 
 7) My program also outputs a confusion matrix for the classifier's performance on the original training data.
+
     -Why is this useful?  Shouldn't your classifier have a 100% classification rate on the data that it was trained on?
+    
       -NO.  If it is perfect, then your classifier is likely to be overfit.  This confusion matrix thus should show that we have some errors, which it does:
 
 [[100   0   0]
