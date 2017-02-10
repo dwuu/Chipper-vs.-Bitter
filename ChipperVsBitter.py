@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import itertools
 import string as s
+
 import random
 
 from sklearn.svm import LinearSVC
@@ -45,7 +46,7 @@ def initialize_stuff(df):
 
 	  	#removes numbers and apostrophe's without replacing with whitespace
 	  	transtable = str.maketrans("","", "'1234567890")
-	  	tweet = tweet.translate(transtable).lower()
+	  	tweet = tweet.translate(transtable).lower(
 
 	 	#add words to dictionary
 	  	for word in tweet.split():
