@@ -19,7 +19,7 @@ The gist of my program:
 
 3) Create 3 classifiers, one for each of love, hate, and sadness.  For each of the these classifiers:
 
-    -It is essentially a binary classifier that calls its sentiment 1 and everything else -1. 
+	-It is essentially a binary classifier that calls its sentiment 1 and everything else -1. 
     
     -Test their performance (based on the AUROC metric) on several magnitudes of hyperparameters
     
@@ -48,7 +48,9 @@ The gist of my program:
       -NO.  If it is perfect, then your classifier is likely to be overfit.  This confusion matrix thus should show that we have some errors, which it does:
 
 [[100   0   0]
+
  [  0 100   0]
+ 
  [  0   8  92]]
 
 NOTES: I considered several different models, including linear and higher-dimensional kernels, L1 and L2 regularization, squared--hinge-loss and hinge-loss, etc.  I found that the Linear-kernel SVM with normal hinge-loss and L2 penalty worked the best for this particular classification problem.  This was optimized through trial and error.
