@@ -1,5 +1,5 @@
 # Chipper-vs.-Bitter
-Using a training set of text-based tweet and their labels (love, hate, or sadness), I designed a linear classifier that attempts to best classify new data.  Because this is a ternary classification problem, I chose to use a one v. all approach to simplify it to a binary problem.
+Using a training set of text-based tweet and their labels (love, hate, or sadness), I designed a machine learning algorithm utilizing a linear classifier that attempts to best classify new data.  Because this is a ternary classification problem, I chose to use a one v. all approach to simplify it to a binary problem.
 
 ChipperVsBitter.py is the python program. 
 It reads the training_data.csv and test_data.csv.
