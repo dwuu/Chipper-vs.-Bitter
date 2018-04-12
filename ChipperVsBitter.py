@@ -15,6 +15,8 @@ from sklearn import metrics
 from matplotlib import pyplot as plt;
 from sklearn.metrics import confusion_matrix
 
+#Added random comment for a git commit
+
 def load_data(fname):
   """
   Reads in a csv file and return a dataframe. A dataframe df is similar to dictionary.
